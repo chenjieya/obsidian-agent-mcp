@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obsidian-agent-mcp"
+version = "0.1.0"
+description = "Python MCP server for note-driven collaboration through Obsidian Local REST API"
+readme = "docs/7-发版与回滚/2026-11-17-安装与使用说明.md"
+requires-python = ">=3.11"
+dependencies = ["mcp==2.3.0", "httpx>=0.28.1,<1"]
+
+[project.scripts]
+obsidian-agent-mcp = "obsidian_mcp.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

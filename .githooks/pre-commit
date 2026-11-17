@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+export PYTHONUTF8=1
+
+cd "$(git rev-parse --show-toplevel)"
+if [ -x .venv/Scripts/python.exe ]; then
+    exec .venv/Scripts/python.exe scripts/check_secrets.py --staged
+elif [ -x .venv/bin/python ]; then
+    exec .venv/bin/python scripts/check_secrets.py --staged
+elif command -v python3 >/dev/null 2>&1; then
+    exec python3 scripts/check_secrets.py --staged
+else
+    exec python scripts/check_secrets.py --staged
+fi

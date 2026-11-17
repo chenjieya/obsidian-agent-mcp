@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "obsidian": {
+      "command": "C:\\Users\\admin\\Desktop\\code\\token\\obsidian-mcp\\.venv\\Scripts\\python.exe",
+      "args": [
+        "-m",
+        "obsidian_mcp",
+        "--env-file",
+        "C:\\Users\\admin\\Desktop\\code\\token\\obsidian-mcp\\.env"
+      ],
+      "env": {
+        "PYTHONUTF8": "1"
+      }
+    }
+  }
+}

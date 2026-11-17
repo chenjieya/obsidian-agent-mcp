@@ -1,0 +1,22 @@
+.venv/
+.tmp/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.claude/
+.coverage
+.tools/
+# 每台电脑自行下载的 Obsidian 插件 CA 证书。
+certs/
+# 私钥和凭证容器；公开 .crt 证书不在此列。
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
